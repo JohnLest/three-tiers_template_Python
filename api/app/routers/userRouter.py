@@ -1,12 +1,19 @@
+from typing import List
 from fastapi import APIRouter
+from model.usersModel import UsersModel
+from bll.services.usersService import UsersService
+from database.database import session
 
 route = APIRouter(
     prefix="/user",
-    tags=["User Router"]) 
+    tags=["User Router"]
+    )
+
+usersService = UsersService(session)
     
-@route.get("/helloWorld") 
+@route.get("/helloWorld", response_model=List[UsersModel]) 
 async def helloWorld():
-    return {"message": "Hello World"}
+    return usersService.getAllUser()
 
 
 @route.get("/byebye")

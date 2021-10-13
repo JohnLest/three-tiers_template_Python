@@ -1,3 +1,4 @@
-from app.routers import userRouter
+from app.routers.userRouter import route
+
 def main(app):
-    app.include_router(userRouter.route)
+    app.include_router(route)
