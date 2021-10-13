@@ -4,7 +4,7 @@ This is a template for a three-tiers architecture with [FastAPI](https://fastapi
 
 ## App 
 This is the Presentation layer.
-It contains the `Main` and the `Route` class
+It contains the `Main` and the `Routers` class
 ## BLL
 This is the Business Logic Layer
 
