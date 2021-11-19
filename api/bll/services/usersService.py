@@ -6,8 +6,8 @@ class UsersService:
     def __init__(self, session):
         self.repo = UsersRepo(session, Users)
 
-    def getAllUser(self):
-        result= self.repo.getAll()
+    def get_all_user(self):
+        result = self.repo.get_all()
         return result
 
 
